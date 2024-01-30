@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8911d8378d98e8d47985027003822673, type: 3}
+  m_Name: ItemScriptable
+  m_EditorClassIdentifier: 
+  level1:
+  - id: 0
+    name: drag
+    sprite: {fileID: 1208311058, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 1
+    name: knife
+    sprite: {fileID: -1876000364, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 2
+    name: socket
+    sprite: {fileID: 1747985715, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  level2:
+  - id: 0
+    name: drag
+    sprite: {fileID: 1208311058, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 1
+    name: knife
+    sprite: {fileID: -1876000364, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 2
+    name: socket
+    sprite: {fileID: 1747985715, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 3
+    name: glove
+    sprite: {fileID: 1690707370, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 4
+    name: toothbrush
+    sprite: {fileID: 1460212291, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 5
+    name: pin
+    sprite: {fileID: 906090872, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 6
+    name: sunscreen
+    sprite: {fileID: -1959401482, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  level3:
+  - id: 0
+    name: drag
+    sprite: {fileID: 1208311058, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 1
+    name: knife
+    sprite: {fileID: -1876000364, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 2
+    name: socket
+    sprite: {fileID: 1747985715, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 3
+    name: glove
+    sprite: {fileID: 1690707370, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 4
+    name: toothbrush
+    sprite: {fileID: 1460212291, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 5
+    name: pin
+    sprite: {fileID: 906090872, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 6
+    name: snack1
+    sprite: {fileID: -1095546703, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 7
+    name: snack2
+    sprite: {fileID: 537304219, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 7
+    name: snack3
+    sprite: {fileID: -998025419, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 8
+    name: sunscreen
+    sprite: {fileID: -1959401482, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 9
+    name: snack4
+    sprite: {fileID: 1450868538, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 10
+    name: snack5
+    sprite: {fileID: -773650664, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 11
+    name: snack6
+    sprite: {fileID: 1363462973, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  level4:
+  - id: 0
+    name: zx
+    sprite: {fileID: 1461083463, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 1
+    name: cz
+    sprite: {fileID: 2090765582, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 2
+    name: bv
+    sprite: {fileID: -1854312998, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 3
+    name: wed
+    sprite: {fileID: -373756804, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 4
+    name: gdaq
+    sprite: {fileID: 490209886, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 5
+    name: defrs
+    sprite: {fileID: 537304219, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 6
+    name: yt
+    sprite: {fileID: -555294253, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 7
+    name: efw
+    sprite: {fileID: -900617069, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
+  - id: 8
+    name: bdfhrt
+    sprite: {fileID: 1826339196, guid: e70db4a8d5b099a4a8abf81bf987bb81, type: 3}
+    status: 0
