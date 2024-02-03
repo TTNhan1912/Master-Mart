@@ -51,30 +51,30 @@ public class GameMN : MonoBehaviour
         Level = PlayerPrefs.GetInt(key_level, 1);
         CloneAndAddToNewList();
         panelInGame.StartCoroutine(panelInGame.StartCountdown(120f));
-
+        Level = 1;
     }
 
     public void CloneAndAddToNewList()
     {
         panelInGame.LevelUpdate();
 
-        if (PlayerPrefs.GetInt(key_level) == 1)
+        if (PlayerPrefs.GetInt(key_level, 1) == 1)
         {
             ListLevel();
         }
-        else if (PlayerPrefs.GetInt(key_level) == 2)
+        else if (PlayerPrefs.GetInt(key_level, 2) == 2)
         {
             ListLevel2();
             panelInGame.ItemPanel(true);
         }
-        else if (PlayerPrefs.GetInt(key_level) == 3)
+        else if (PlayerPrefs.GetInt(key_level, 3) == 3)
         {
             ListLevel3();
             panelInGame.ItemPanellv3(true);
 
 
         }
-        else if (PlayerPrefs.GetInt(key_level) == 4)
+        else if (PlayerPrefs.GetInt(key_level, 4) == 4)
         {
             ListLevel4();
         }

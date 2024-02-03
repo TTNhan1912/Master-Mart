@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    public int Coins { get; private set; }
+    public int Coins { get; set; }
     public string key_coin;
     [SerializeField] private PanelInGame panelInGame;
     [SerializeField] private GameObject plus;
@@ -12,7 +12,7 @@ public class GameController : MonoBehaviour
 
     private void Awake()
     {
-        Coins = PlayerPrefs.GetInt(key_coin);
+        Coins = PlayerPrefs.GetInt(key_coin, 10000);
         panelInGame.Coins();
 
     }
@@ -45,7 +45,7 @@ public class GameController : MonoBehaviour
     }
     public void AddSlot()
     {
-        if (PlayerPrefs.GetInt(key_coin) >= 500)
+        if (PlayerPrefs.GetInt(key_coin, 10000) >= 500)
         {
             plus.SetActive(false);
             SoundMN.Instance.PlaySfx("Click");
