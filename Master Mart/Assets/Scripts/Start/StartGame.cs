@@ -8,14 +8,12 @@ public class StartGame : MonoBehaviour
 
     public void Setting()
     {
-        panelSetting.SetActive(true);
-
         Vector3 startPosition;
 
         startPosition = panelSetting.transform.position;
         panelSetting.transform.position = new Vector2(startPosition.x, startPosition.y + 25f);
-        panelSetting.transform.DOMoveY(startPosition.y, 0.3f).SetEase(Ease.OutQuad);
-
+        panelSetting.transform.DOMoveY(startPosition.y, 0.3f).SetEase(Ease.OutQuad).OnComplete(()
+            => panelSetting.SetActive(true));
     }
 
     public void ExitSetting()

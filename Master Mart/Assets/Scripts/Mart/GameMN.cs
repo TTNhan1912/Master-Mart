@@ -36,7 +36,7 @@ public class GameMN : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             PlayerPrefs.SetInt(key_level, 1);
         }
@@ -58,102 +58,90 @@ public class GameMN : MonoBehaviour
     {
         panelInGame.LevelUpdate();
 
-        if (PlayerPrefs.GetInt(key_level, 1) == 1)
+        int level = PlayerPrefs.GetInt(key_level, 1);
+
+        switch (level)
         {
-            ListLevel();
+            case 1:
+                ListLevel(itemlist);
+                break;
+            case 2:
+                ListLevel(itemlist2);
+                panelInGame.ItemPanel(true);
+                break;
+            case 3:
+                ListLevel(itemlist3);
+                panelInGame.ItemPanellv3(true);
+                break;
+            case 4:
+                ListLevel(itemlist4);
+                break;
+            default:
+                Debug.LogWarning("Unknown level: " + level);
+                break;
         }
-        else if (PlayerPrefs.GetInt(key_level, 2) == 2)
-        {
-            ListLevel2();
-            panelInGame.ItemPanel(true);
-        }
-        else if (PlayerPrefs.GetInt(key_level, 3) == 3)
-        {
-            ListLevel3();
-            panelInGame.ItemPanellv3(true);
 
 
-        }
-        else if (PlayerPrefs.GetInt(key_level, 4) == 4)
-        {
-            ListLevel4();
-        }
+        /*
+                panelInGame.LevelUpdate();
 
+                if (PlayerPrefs.GetInt(key_level, 1) == 1)
+                {
+                    ListLevel1();
+                }
+                else if (PlayerPrefs.GetInt(key_level, 2) == 2)
+                {
+                    ListLevel2();
+                    panelInGame.ItemPanel(true);
+                }
+                else if (PlayerPrefs.GetInt(key_level, 3) == 3)
+                {
+                    ListLevel3();
+                    panelInGame.ItemPanellv3(true);
+
+
+                }
+                else if (PlayerPrefs.GetInt(key_level, 4) == 4)
+                {
+                    ListLevel4();
+                }
+        */
     }
 
-    public void ListLevel()
+    private void ListLevel(List<Item> itemList)
     {
-        foreach (Item Item in itemlist)
+        foreach (Item item in itemList)
         {
             for (int i = 0; i < soLuong; i++)
             {
-                // Tạo một bản sao của item
-                Item clonedItem = new Item(Item);
-
-                // Gán ID mới cho bản sao và tăng biến tạm lên 1
+                Item clonedItem = new Item(item);
                 clonedItem.Id = newId++;
-
-                // Thêm bản sao vào danh sách mới
-                clonedItemsList.Add(clonedItem);
-            }
-        }
-        SpawnItem();
-    }
-    public void ListLevel2()
-    {
-        foreach (Item Item in itemlist2)
-        {
-            for (int i = 0; i < soLuong; i++)
-            {
-                // Tạo một bản sao của item
-                Item clonedItem = new Item(Item);
-
-                // Gán ID mới cho bản sao và tăng biến tạm lên 1
-                clonedItem.Id = newId++;
-
-                // Thêm bản sao vào danh sách mới
-                clonedItemsList.Add(clonedItem);
-            }
-        }
-        SpawnItem();
-    }
-    public void ListLevel3()
-    {
-        foreach (Item Item in itemlist3)
-        {
-            for (int i = 0; i < soLuong; i++)
-            {
-                // Tạo một bản sao của item
-                Item clonedItem = new Item(Item);
-
-                // Gán ID mới cho bản sao và tăng biến tạm lên 1
-                clonedItem.Id = newId++;
-
-                // Thêm bản sao vào danh sách mới
-                clonedItemsList.Add(clonedItem);
-            }
-        }
-        SpawnItem();
-    }
-    public void ListLevel4()
-    {
-        foreach (Item Item in itemlist4)
-        {
-            for (int i = 0; i < soLuong; i++)
-            {
-                // Tạo một bản sao của item
-                Item clonedItem = new Item(Item);
-
-                // Gán ID mới cho bản sao và tăng biến tạm lên 1
-                clonedItem.Id = newId++;
-
-                // Thêm bản sao vào danh sách mới
                 clonedItemsList.Add(clonedItem);
             }
         }
         SpawnItem();
     }
 
+
+    private void ListLevel1()
+    {
+        ListLevel(itemlist);
+    }
+
+    private void ListLevel2()
+    {
+        ListLevel(itemlist2);
+    }
+
+    private void ListLevel3()
+    {
+        ListLevel(itemlist3);
+    }
+
+    private void ListLevel4()
+    {
+        ListLevel(itemlist4);
+    }
     private void SpawnItem()
     {
         itemDict = new();

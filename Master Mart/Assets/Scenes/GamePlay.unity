@@ -3907,8 +3907,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1333233380}
-        m_TargetAssemblyTypeName: PanelInGame, Assembly-CSharp
+      - m_Target: {fileID: 1333233381}
+        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
         m_MethodName: Setting
         m_Mode: 1
         m_Arguments:
@@ -5323,6 +5323,7 @@ GameObject:
   - component: {fileID: 1333233377}
   - component: {fileID: 1333233379}
   - component: {fileID: 1333233380}
+  - component: {fileID: 1333233381}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -5382,6 +5383,19 @@ MonoBehaviour:
   newItemPanel: {fileID: 404334155}
   newItemPanellv2: {fileID: 1462152651}
   newItemPanellv3: {fileID: 1306091638}
+--- !u!114 &1333233381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333233376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7c2b2868bc60e42924c5e0ab165339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelSetting: {fileID: 935106657}
 --- !u!1 &1396836206
 GameObject:
   m_ObjectHideFlags: 0
@@ -6133,8 +6147,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1333233380}
-        m_TargetAssemblyTypeName: PanelInGame, Assembly-CSharp
+      - m_Target: {fileID: 1333233381}
+        m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
         m_MethodName: ExitSetting
         m_Mode: 1
         m_Arguments:
@@ -7552,7 +7566,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1803660967}
+      - m_Target: {fileID: 1333233381}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
         m_MethodName: StartMenuGame
         m_Mode: 1

@@ -19,7 +19,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             PlayerPrefs.SetInt(key_coin, 10000);
         }
@@ -27,14 +27,12 @@ public class GameController : MonoBehaviour
 
     public void PanelAddSlot()
     {
-        panelAddSlot.SetActive(true);
         SoundMN.Instance.PlaySfx("Click");
-
         Vector3 startPosition;
-
         startPosition = panelAddSlot.transform.position;
         panelAddSlot.transform.position = new Vector2(startPosition.x, startPosition.y + 25f);
-        panelAddSlot.transform.DOMoveY(startPosition.y, 0.3f).SetEase(Ease.OutQuad);
+        panelAddSlot.transform.DOMoveY(startPosition.y, 0.3f).SetEase(Ease.OutQuad).OnComplete(()
+            => panelAddSlot.SetActive(true));
     }
 
     public void ExitPanel()
